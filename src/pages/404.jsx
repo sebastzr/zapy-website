@@ -11,9 +11,9 @@ const NotFound = () => (
       <Themed.p>
         Oh, no!
         <br />
-        You found a page that doesn't exist.{` `}
+        Encontraste una página que no existe.{` `}
         <TLink as={Link} to="/">
-          Do you want to visit the homepage?
+          ¿Quieres visitar la homepage?
         </TLink>
       </Themed.p>
     </Container>

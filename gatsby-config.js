@@ -1,20 +1,20 @@
-require(`dotenv`).config()
+require(`dotenv`).config();
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
     // You can overwrite values here that are used for the SEO component
     // You can also add new values here to query them like usual
     // See all options: https://github.com/LekoArts/gatsby-themes/blob/main/themes/gatsby-theme-emma-core/gatsby-config.js
-    siteTitle: `Emma`,
-    siteTitleAlt: `Emma - Gatsby Starter Portfolio`,
-    siteHeadline: `Emma - Gatsby Theme from @lekoarts`,
-    siteUrl: `https://emma.lekoarts.de`,
-    siteDescription: `Minimalistic portfolio with full-width grid, page transitions, support for additional MDX pages, and a focus on large images`,
-    siteLanguage: `en`,
+    siteTitle: `Zapy`,
+    siteTitleAlt: `Zapy Dev`,
+    siteHeadline: `Zapy Dev`,
+    siteUrl: `https:/zapy.dev`,
+    siteDescription: `Consultoría TI - Desarrollo de Software - Desarrollo Web - Diseño Gráfico - E-Commerce - E-Learning`,
+    siteLanguage: `es`,
     siteImage: `/banner.jpg`,
-    author: `@lekoarts_de`,
+    author: `@zapydev`,
   },
   plugins: [
     {
@@ -22,13 +22,23 @@ module.exports = {
       // See the theme's README for all available options
       options: {},
     },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-emoji`,
+          },
+        ],
+      },
+    },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Emma - @lekoarts/gatsby-theme-emma`,
-        short_name: `Emma`,
-        description: `Minimalistic bright portfolio with full-width grid and large images`,
+        name: `Zapy Dev`,
+        short_name: `Zapy`,
+        description: `Consultoría TI - Desarrollo de Software - Desarrollo Web - Diseño Gráfico - E-Commerce - E-Learning`,
         start_url: `/`,
         background_color: `#fff`,
         // This will impact how browsers show your PWA/website
@@ -59,4 +69,4 @@ module.exports = {
       },
     },
   ].filter(Boolean),
-}
+};
